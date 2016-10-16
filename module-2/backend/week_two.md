@@ -5,17 +5,43 @@ Fork this respository. Answer the questions to the best of your ability. Try to 
 Note: When you're done, submit a PR. 
 
 1. At a high level, what is ActiveRecord? What does it do/allow you to do?
-2. What kind of methods are `belongs_to`, and `has_many`? (i.e. class or instance) Give an example.
-3. What do they allow you to do?
-4. What's the difference between agile workflow and waterfall method?
-5. What is the difference between `#new` and `#create`?
-6. At a basic level, what does cURL allow you to do?
-7. In a database that's holding students and teachers, what will be the relationship between students and teachers? Draw the schema diagram.
-8. Define foreign key, primary key, and schema.
-9. Describe the relationship between a foreign key on one table and a primary key on another table.
-10. What are the parts of an HTTP response?
-11. Describe some techniques to make our Sinatra code more DRY. Give an example of when you would use these techniques.
+Active record is a framework for SQL that has methods and allows data to be manipulated more easily.
 
+2. What kind of methods are `belongs_to`, and `has_many`? (i.e. class or instance) Give an example.
+pointers? I don't know/ forget the name -  but they point to other objects that they either belong to or have alot of.
+
+3. What do they allow you to do?
+They allow you to access the items from another table with the corresponding id.
+
+4. What's the difference between agile workflow and waterfall method?
+Agile is a closer production cycle that builds on itself. 
+
+5. What is the difference between `#new` and `#create`?
+new is the get method. create is  a post
+
+6. At a basic level, what does cURL allow you to do?
+Send stuff like it was being brought in from an outside ip? I think
+
+7. In a database that's holding students and teachers, what will be the relationship between students and teachers? Draw the schema diagram.
+students                  teachers
+ id                          id
+ name                       name
+ teacher_id                           
+
+belongs to teacher         has_many :students
+
+8. Define foreign key, primary key, and schema.
+Foriegn key: the teacher id in students
+primary key: id in students
+schema: the map of the table layout.
+
+9. Describe the relationship between a foreign key on one table and a primary key on another table.
+the primary key of teachers is the foriegn key in student
+
+10. What are the parts of an HTTP response?
+ you have the server, port then stuff and then params
+11. Describe some techniques to make our Sinatra code more DRY. Give an example of when you would use these techniques.
+Make methods for stuff you're doing over and overagain in your controllers.  For tests build them in the test helper.
 
 ### Optional Questions
 
